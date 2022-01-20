@@ -39,3 +39,32 @@ var course2 = "am"
 print(course2, terminator:"-")
 print(course1,course2, separator: "&")
 
+
+--------------------------------------------------------------------
+import UIKit
+
+class ViewController: UIViewController {
+
+    @IBOutlet weak var NameOutlet: UITextField!
+    
+    @IBOutlet weak var gradeoutlet: UITextField!
+    
+    @IBOutlet weak var Displaylable: UILabel!
+    
+    @IBOutlet weak var outputlable: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+
+    @IBAction func buttonclicked(_ sender: UIButton) {
+        //read the data from the text box and store it and change the display format, hellow, name!
+        var name = NameOutlet.text!
+        var grade = gradeoutlet.text!
+        Displaylable.text = "Hello, \(name)! your grsde is \(grade)."
+
+    }
+}
+
